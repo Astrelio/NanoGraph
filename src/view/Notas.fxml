@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.NotasController" spacing="10" style="-fx-padding: 20;">
+    <Button text="&lt; VOLVER" onAction="#volver" />
+    
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <VBox spacing="10" prefWidth="250" HBox.hgrow="NEVER">
+            <Label text="MIS NOTAS" styleClass="title-label"/>
+            <ComboBox fx:id="cbMateriaFiltro" promptText="SELECCIONAR MATERIA" maxWidth="Infinity"/>
+            <ListView fx:id="listNotas" VBox.vgrow="ALWAYS"/>
+        </VBox>
+
+        <VBox spacing="15" prefWidth="500" HBox.hgrow="ALWAYS" style="-fx-padding: 15; -fx-border-color: #4A4262; -fx-border-width: 2px;">
+            <Label text="EDITOR DE NOTA" styleClass="title-label" style="-fx-font-size: 14px;"/>
+            
+            <TextField fx:id="txtTitulo" promptText="TITULO DE LA NOTA" />
+            <TextArea fx:id="txtEditor" promptText="ESCRIBE TU NOTA AQUI..." VBox.vgrow="ALWAYS"/>
+            
+            <Button text="[ GUARDAR NOTA ]" onAction="#guardarNota" maxWidth="Infinity" styleClass="action-button"/>
+        </VBox>
+    </HBox>
+</VBox>

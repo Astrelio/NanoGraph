@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.DashboardController" spacing="20" alignment="CENTER" style="-fx-padding: 30;">
+    <HBox alignment="CENTER_RIGHT" prefWidth="800">
+        <Button text="[ SALIR ]" onAction="#cerrarSesion" styleClass="button" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 10px; -fx-padding: 6 12;"/>
+    </HBox>
+    <Label text="DASHBOARD NANOGRAPH" styleClass="title-label"/>
+    
+    <HBox spacing="20" alignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox spacing="10" HBox.hgrow="ALWAYS" alignment="CENTER">
+            <Label text="MIS MATERIAS" styleClass="title-label"/>
+            <ListView fx:id="listMaterias" VBox.vgrow="ALWAYS" maxWidth="400"/>
+            <Button text="+ NUEVA MATERIA" onAction="#crearNuevaMateria" prefWidth="200" styleClass="action-button"/>
+        </VBox>
+        <VBox spacing="10" HBox.hgrow="ALWAYS" alignment="CENTER">
+            <Label text="RESUMEN TAREAS" styleClass="title-label"/>
+            <Label fx:id="lblResumenTareas" text="0 tareas para hoy" style="-fx-text-fill: #A78BFA; -fx-font-size: 16px;"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="15" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+        <Button fx:id="btnModuloTareas" text="[ TAREAS ]" onAction="#irATareas"/>
+        <Button fx:id="btnModuloNotas" text="[ NOTAS ]" onAction="#irANotas"/>
+        <Button fx:id="btnModuloPomodoro" text="[ POMODORO ]" onAction="#irAPomodoro"/>
+    </HBox>
+</VBox>

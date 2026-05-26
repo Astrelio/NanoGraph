@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginController" spacing="20" alignment="CENTER" prefWidth="400" prefHeight="400" style="-fx-padding: 40;">
+    
+    <Label text="NANOGRAPH" styleClass="title-label" style="-fx-font-size: 32px;"/>
+    <Label text="Inicia sesión" />
+    
+    <VBox spacing="10" alignment="CENTER_LEFT" prefWidth="300">
+        <Label text="Correo Electrónico"/>
+        <TextField fx:id="txtEmail" promptText="ejemplo@correo.com" />
+    </VBox>
+    
+    <CheckBox fx:id="chkRecordar" text="Recordar sesión"/>
+    
+    <Label fx:id="lblError" text="" style="-fx-text-fill: #e74c3c;"/>
+    
+    <Button text="[ INGRESAR ]" onAction="#ingresar" prefWidth="300" styleClass="action-button"/>
+
+</VBox>

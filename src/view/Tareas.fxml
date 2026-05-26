@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.TareasController" spacing="10" style="-fx-padding: 20;">
+    <Button text="&lt; VOLVER" onAction="#volver" />
+    
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <VBox spacing="10" prefWidth="400" HBox.hgrow="ALWAYS">
+            <Label text="MIS TAREAS" styleClass="title-label"/>
+            <ComboBox fx:id="cbMateria" promptText="SELECCIONAR MATERIA" maxWidth="Infinity"/>
+            <TableView fx:id="tableTareas" VBox.vgrow="ALWAYS"/>
+        </VBox>
+
+        <VBox spacing="15" prefWidth="300" style="-fx-padding: 15; -fx-border-color: #4A4262; -fx-border-width: 2px;">
+            <Label text="NUEVA TAREA" styleClass="title-label" style="-fx-font-size: 14px;"/>
+            
+            <TextField fx:id="txtTitulo" promptText="TITULO"/>
+            <TextArea fx:id="txtDescripcion" promptText="DESCRIPCION" VBox.vgrow="ALWAYS"/>
+            <DatePicker fx:id="dpFechaLimite" promptText="FECHA LIMITE" maxWidth="Infinity"/>
+            <CheckBox fx:id="chkCompletada" text="COMPLETADA"/>
+            
+            <Button text="[ GUARDAR TAREA ]" onAction="#guardarTarea" maxWidth="Infinity" styleClass="action-button"/>
+        </VBox>
+    </HBox>
+</VBox>

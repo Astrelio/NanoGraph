@@ -1,0 +1,165 @@
+/* Paleta Noche de Estudio
+   Fondo: #1E1E2E
+   Cajas/Botones base: #4A4262
+   Acentos/Hover: #A78BFA
+   Luz/Activo: #FDE047
+   Texto: #F5F5F7
+*/
+
+.root {
+    -fx-background-color: #1E1E2E;
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 12px;
+    -fx-text-fill: #F5F5F7;
+}
+
+.label {
+    -fx-text-fill: #F5F5F7;
+}
+
+.title-label {
+    -fx-font-size: 20px;
+    -fx-text-fill: #FDE047;
+}
+
+/* Botones Retro */
+.button {
+    -fx-background-color: #4A4262;
+    -fx-text-fill: #F5F5F7;
+    -fx-border-color: #A78BFA;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 8 16;
+}
+
+.button:hover {
+    -fx-background-color: #A78BFA;
+    -fx-text-fill: #1E1E2E;
+}
+
+.button:pressed {
+    -fx-background-color: #FDE047;
+    -fx-border-color: #FDE047;
+    -fx-text-fill: #1E1E2E;
+}
+
+/* Campos de texto */
+.text-field, .text-area {
+    -fx-background-color: #1E1E2E;
+    -fx-border-color: #4A4262;
+    -fx-border-width: 2px;
+    -fx-text-fill: #FDE047;
+    -fx-prompt-text-fill: #4A4262;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+/* Tablas y Listas */
+.table-view, .list-view {
+    -fx-background-color: #1E1E2E;
+    -fx-border-color: #4A4262;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.table-view .column-header-background, .table-view .column-header {
+    -fx-background-color: #4A4262;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #FDE047;
+}
+
+/* Color for the text inside lists and tables */
+.table-row-cell, .list-cell {
+    -fx-background-color: #1E1E2E;
+    -fx-text-fill: #F5F5F7;
+}
+.table-cell {
+    -fx-text-fill: #F5F5F7;
+}
+
+.table-row-cell:selected, .list-cell:selected, .table-cell:selected {
+    -fx-background-color: #A78BFA;
+    -fx-text-fill: #1E1E2E;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #4A4262;
+    -fx-border-color: #A78BFA;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+.combo-box .list-cell {
+    -fx-text-fill: #F5F5F7;
+}
+.combo-box .list-view {
+    -fx-background-color: #1E1E2E;
+    -fx-border-color: #A78BFA;
+}
+
+/* Checkbox Retro */
+.check-box .box {
+    -fx-background-color: #1E1E2E;
+    -fx-border-color: #4A4262;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+.check-box:selected .mark {
+    -fx-background-color: #FDE047;
+}
+
+/* Pomodoro Timer Circle */
+.pomodoro-circle {
+    -fx-stroke: #A78BFA;
+    -fx-stroke-width: 8;
+    -fx-fill: transparent;
+}
+
+/* Menú Contextual (Clic Derecho) */
+.context-menu {
+    -fx-background-color: #4A4262;
+    -fx-border-color: #A78BFA;
+    -fx-border-width: 2px;
+}
+.menu-item .label {
+    -fx-text-fill: #F5F5F7;
+}
+.menu-item:focused {
+    -fx-background-color: #A78BFA;
+}
+.menu-item:focused .label {
+    -fx-text-fill: #1E1E2E;
+}
+
+/* Cuadros de Diálogo (Alertas) */
+.dialog-pane {
+    -fx-background-color: #1E1E2E;
+    -fx-border-color: #A78BFA;
+    -fx-border-width: 4px;
+}
+.dialog-pane .content {
+    -fx-text-fill: #F5F5F7;
+}
+.dialog-pane .header-panel {
+    -fx-background-color: #4A4262;
+}
+.dialog-pane .header-panel .label {
+    -fx-text-fill: #FDE047;
+}
+
+/* Tooltip Flotante (Para la descripción de las tareas) */
+.tooltip {
+    -fx-background-color: #4A4262;
+    -fx-text-fill: #FDE047;
+    -fx-border-color: #A78BFA;
+    -fx-border-width: 2px;
+    -fx-font-size: 10px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 3, 3);
+}
