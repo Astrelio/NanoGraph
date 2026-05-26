@@ -170,4 +170,9 @@ public class DashboardController {
     private void irAPomodoro(ActionEvent event) {
         Navegador.cambiarEscena(event, "/view/Pomodoro.fxml", "Módulo Pomodoro");
     }
+
+    @FXML
+    private void irAClassroom(ActionEvent event) {
+        Navegador.cambiarEscena(event, "/view/Classroom.fxml", "Google Classroom");
+    }
 }

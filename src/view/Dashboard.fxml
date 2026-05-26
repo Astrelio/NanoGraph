@@ -27,5 +27,6 @@
         <Button fx:id="btnModuloTareas" text="[ TAREAS ]" onAction="#irATareas"/>
         <Button fx:id="btnModuloNotas" text="[ NOTAS ]" onAction="#irANotas"/>
         <Button fx:id="btnModuloPomodoro" text="[ POMODORO ]" onAction="#irAPomodoro"/>
+        <Button fx:id="btnModuloClassroom" text="[ CLASSROOM ]" onAction="#irAClassroom" style="-fx-border-color: #FDE047; -fx-text-fill: #FDE047;"/>
     </HBox>
 </VBox>

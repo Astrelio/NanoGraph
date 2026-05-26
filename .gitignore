@@ -13,6 +13,7 @@ bin/
 
 # Environment / secrets
 .env
+google_tokens.properties
 
 # OS files
 .DS_Store

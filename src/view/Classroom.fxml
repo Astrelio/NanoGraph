@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ClassroomController" spacing="20" alignment="CENTER" style="-fx-padding: 30;">
+
+    <HBox alignment="CENTER_LEFT" prefWidth="800">
+        <Button text="[ VOLVER ]" onAction="#volver" styleClass="button" style="-fx-font-size: 10px; -fx-padding: 6 12;"/>
+    </HBox>
+
+    <Label text="GOOGLE CLASSROOM" styleClass="title-label"/>
+
+    <!-- Panel de conexion (visible cuando no hay tokens) -->
+    <VBox fx:id="panelConexion" spacing="15" alignment="CENTER" VBox.vgrow="ALWAYS">
+        <Label text="Conecta tu cuenta de Google para" style="-fx-text-fill: #A78BFA; -fx-font-size: 12px;"/>
+        <Label text="importar tus cursos y tareas." style="-fx-text-fill: #A78BFA; -fx-font-size: 12px;"/>
+        <Button fx:id="btnConectar" text="[ CONECTAR CON GOOGLE ]" onAction="#conectarGoogle" style="-fx-background-color: #4A4262; -fx-text-fill: #FDE047; -fx-border-color: #FDE047; -fx-border-width: 3px; -fx-font-size: 14px; -fx-padding: 12 24;"/>
+        <Label fx:id="lblEstadoConexion" text="" style="-fx-text-fill: #A78BFA; -fx-font-size: 10px;"/>
+    </VBox>
+
+    <!-- Panel de cursos (visible cuando hay tokens) -->
+    <HBox fx:id="panelCursos" spacing="20" alignment="CENTER" VBox.vgrow="ALWAYS" visible="false" managed="false">
+        <VBox spacing="10" HBox.hgrow="ALWAYS" alignment="CENTER">
+            <Label text="MIS CURSOS" styleClass="title-label" style="-fx-font-size: 14px;"/>
+            <ListView fx:id="listCursos" VBox.vgrow="ALWAYS" maxWidth="350"/>
+        </VBox>
+        <VBox spacing="10" HBox.hgrow="ALWAYS" alignment="CENTER">
+            <Label text="TAREAS DEL CURSO" styleClass="title-label" style="-fx-font-size: 14px;"/>
+            <ListView fx:id="listTareasClassroom" VBox.vgrow="ALWAYS" maxWidth="350"/>
+            <Button fx:id="btnImportar" text="[ IMPORTAR TAREAS ]" onAction="#importarTareas" style="-fx-background-color: #4A4262; -fx-text-fill: #FDE047; -fx-border-color: #FDE047; -fx-border-width: 2px; -fx-padding: 8 16;"/>
+            <Label fx:id="lblEstadoImport" text="" style="-fx-text-fill: #A78BFA; -fx-font-size: 10px;"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="15" alignment="CENTER" style="-fx-padding: 10 0 0 0;">
+        <Button fx:id="btnDesconectar" text="[ DESCONECTAR GOOGLE ]" onAction="#desconectarGoogle" visible="false" managed="false" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 10px; -fx-padding: 6 12;"/>
+    </HBox>
+</VBox>
