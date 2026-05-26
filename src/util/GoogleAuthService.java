@@ -23,6 +23,14 @@ public class GoogleAuthService {
         CompletableFuture<Boolean> resultado = new CompletableFuture<>();
 
         try {
+            // Detener el servidor anterior si se quedó corriendo (ej: el usuario cerró el navegador sin terminar)
+            if (callbackServer != null) {
+                try {
+                    callbackServer.stop(0);
+                    callbackServer = null;
+                } catch (Exception e) {}
+            }
+
             // 1. Levantar servidor local para recibir el callback
             callbackServer = HttpServer.create(new InetSocketAddress(8085), 0);
 
